@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+    .section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-title h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    position: relative;
+    display: inline-block;
+    padding: 8px 18px;
+}
+.section-title h2 span {
+    color: rgb(20, 248, 180);
+}
+.section-title h2:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    border: 3px solid rgb(20, 248, 180);
+    border-bottom: none;
+    border-right: none;
+    width: 40px;
+    height: 40px;
+}
+.section-title h2:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    border: 3px solid rgb(20, 248, 180);
+    border-top: none;
+    border-left: none;
+    width: 40px;
+    height: 40px;
+}
+
+/* color: rgb(20, 248, 180);   */
+
+        .gallery-area {
+    padding: 150px 0;
+    overflow-x: hidden;
+}
+.p-none {
+    padding: 0;
+}
+.box{
+    overflow: hidden;
+    position: relative;
+}
+.box img{
+    width: 100%;
+    height: auto;
+}
+.box .box-content{
+    padding: 25% 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.box:hover .box-content{ opacity: 1; }
+.box:before,
+.box:after,
+.box .box-content:before,
+.box .box-content:after{
+    content: "";
+    width: 50%;
+    height: 50%;
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+}
+.box:after{ top: 50%; }
+.box .box-content:before,
+.box .box-content:after{
+    top: 0;
+    left: 50%;
+    z-index: -1;
+}
+.box .box-content:after{ top: 50%; }
+.box:hover:before{
+    left: 50%;
+    opacity: 1;
+}
+.box:hover:after{
+    top: 0;
+    opacity: 1;
+}
+.box:hover .box-content:before{
+    top: 50%;
+    opacity: 1;
+}
+.box:hover .box-content:after{
+    left: 0;
+    opacity: 1;
+}
+.box .title{
+    font-size: 24px;
+    color: rgb(20, 248, 180);
+    text-transform: capitalize;
+    margin: 0 0 20px 0;
+}
+.box .post{
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 20px 0;
+}
+.box .icon{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.box .icon li{
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+.box .icon a{
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15%;
+    background: #fff;
+    color: #2d2c2c;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+}
+.box .icon a:hover{
+    background: transparent;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 3px #fff, -1px -1px 3px #fff;
+}
